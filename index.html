@@ -1,267 +1,164 @@
 <!DOCTYPE html>
-
-<html class="light" lang="en"><head>
+<html lang="en" class="light">
+<head>
 <meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Morya Essentials | Pure by Faith</title>
+
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Noto+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    colors: {
-                        "primary": "#ac9b72",
-                        "background-light": "#f7f7f6",
-                        "background-dark": "#1c1a16",
-                        "accent-sage": "#6D8D6D",
-                    },
-                    fontFamily: {
-                        "display": ["Noto Serif", "serif"],
-                        "sans": ["Noto Sans", "sans-serif"]
-                    },
-                    borderRadius: {
-                        "DEFAULT": "0.5rem",
-                        "lg": "1rem",
-                        "xl": "1.5rem",
-                        "full": "9999px"
-                    },
-                },
-            },
-        }
-    </script>
-<style>body {
-    font-family: "Noto Sans", sans-serif
-    }
+
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&family=Noto+Sans:wght@400;500;700&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined&display=swap" rel="stylesheet"/>
+
+<script>
+tailwind.config = {
+  darkMode: "class",
+  theme: {
+    extend: {
+      colors: {
+        primary: "#ac9b72",
+        "background-light": "#f7f7f6",
+        "background-dark": "#1c1a16",
+        "accent-sage": "#6D8D6D",
+      },
+      fontFamily: {
+        display: ["Noto Serif", "serif"],
+        sans: ["Noto Sans", "sans-serif"],
+      },
+    },
+  },
+};
+</script>
+
+<style>
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+body {
+  font-family: "Noto Sans", sans-serif;
+}
 .font-display {
-    font-family: "Noto Serif", serif
-    }
+  font-family: "Noto Serif", serif;
+}
 .organic-blob {
-    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%
-    }
+  border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+}
 .marble-bg {
-    background-image: linear-gradient(to right bottom, rgba(255, 255, 255, 0.8), rgba(247, 247, 246, 0.8)), url(https://lh3.googleusercontent.com/aida-public/AB6AXuCDN0Nk73HDtHzsbIo9nS_kuekQmPq8P-X1DK5vWVoklf-mj8eeSawH3gJRefcEvLsRy11bVi5l7mm-p_co9r_DifOL96q2okHpXVJGKMc7dwiLQbYt1BuAXk2c6WFM3rTQcttIYDmZM5qevWE_guC_1MJ3sX0-np1uXCrN3O6wluAgKe9PHWpzP5_XYrXo5F7QMbuULlLnMnfUMIUsO3glcm4UMVVhbunIktOC1DvyzeWxt93xItDpyuZGW3uTb9eU_vHOWWyS6vk)
-    }</style>
+  background-image:
+    linear-gradient(to right bottom, rgba(255,255,255,.85), rgba(247,247,246,.85)),
+    url("https://lh3.googleusercontent.com/aida-public/AB6AXuCDN0Nk73HDtHzsbIo9nS_kuekQmPq8P-X1DK5vWVoklf-mj8eeSawH3gJRefcEvLsRy11bVi5l7mm-p_co9r_DifOL96q2okHpXVJGKMc7dwiLQbYt1BuAXk2c6WFM3rTQcttIYDmZM5qevWE_guC_1MJ3sX0-np1uXCrN3O6wluAgKe9PHWpzP5_XYrXo5F7QMbuULlLnMnfUMIUsO3glcm4UMVVhbunIktOC1DvyzeWxt93xItDpyuZGW3uTb9eU_vHOWWyS6vk)");
+}
+</style>
 </head>
-<body class="bg-background-light dark:bg-background-dark text-[#161512] dark:text-stone-200 selection:bg-primary/30">
-<div class="layout-container flex h-full grow flex-col">
-<!-- Navigation -->
-<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-stone-200 dark:border-stone-800 px-10 py-5 sticky top-0 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md z-50">
-<div class="flex items-center gap-4">
-<div class="size-8 text-primary">
-<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
-<path d="M13.8261 30.5736C16.7203 29.8826 20.2244 29.4783 24 29.4783C27.7756 29.4783 31.2797 29.8826 34.1739 30.5736C36.9144 31.2278 39.9967 32.7669 41.3563 33.8352L24.8486 7.36089C24.4571 6.73303 23.5429 6.73303 23.1514 7.36089L6.64374 33.8352C8.00331 32.7669 11.0856 31.2278 13.8261 30.5736Z" fill="currentColor"></path>
-<path clip-rule="evenodd" d="M39.998 35.764C39.9944 35.7463 39.9875 35.7155 39.9748 35.6706C39.9436 35.5601 39.8949 35.4259 39.8346 35.2825C39.8168 35.2403 39.7989 35.1993 39.7813 35.1602C38.5103 34.2887 35.9788 33.0607 33.7095 32.5189C30.9875 31.8691 27.6413 31.4783 24 31.4783C20.3587 31.4783 17.0125 31.8691 14.2905 32.5189C12.0012 33.0654 9.44505 34.3104 8.18538 35.1832C8.17384 35.2075 8.16216 35.233 8.15052 35.2592C8.09919 35.3751 8.05721 35.4886 8.02977 35.589C8.00356 35.6848 8.00039 35.7333 8.00004 35.7333C8.00004 35.7333 8 35.7333 8.00004 35.7333C8.00004 35.7641 8.0104 36.0767 8.68485 36.6314C9.34546 37.1746 10.4222 37.7531 11.9291 38.2772C14.9242 39.319 19.1919 40 24 40C28.8081 40 33.0758 39.319 36.0709 38.2772C37.5778 37.7531 38.6545 37.1746 39.3151 36.6314C39.9006 36.1499 39.9857 35.8511 39.998 35.764ZM4.95178 32.7688L21.4543 6.30267C22.6288 4.4191 25.3712 4.41909 26.5457 6.30267L43.0534 32.777C43.0709 32.8052 43.0878 32.8338 43.104 32.8629L41.3563 33.8352C43.104 32.8629 43.1038 32.8626 43.104 32.8629L43.1051 32.865L43.1065 32.8675L43.1101 32.8739L43.1199 32.8918C43.1276 32.906 43.1377 32.9246 43.1497 32.9473C43.1738 32.9925 43.2062 33.0545 43.244 33.1299C43.319 33.2792 43.4196 33.489 43.5217 33.7317C43.6901 34.1321 44 34.9311 44 35.7391C44 37.4427 43.003 38.7775 41.8558 39.7209C40.6947 40.6757 39.1354 41.4464 37.385 42.0552C33.8654 43.2794 29.133 44 24 44C18.867 44 14.1346 43.2794 10.615 42.0552C8.86463 41.4464 7.30529 40.6757 6.14419 39.7209C4.99695 38.7775 3.99999 37.4427 3.99999 35.7391C3.99999 34.8725 4.29264 34.0922 4.49321 33.6393C4.60375 33.3898 4.71348 33.1804 4.79687 33.0311C4.83898 32.9556 4.87547 32.8935 4.9035 32.8471C4.91754 32.8238 4.92954 32.8043 4.93916 32.7889L4.94662 32.777L4.95178 32.7688ZM35.9868 29.004L24 9.77997L12.0131 29.004C12.4661 28.8609 12.9179 28.7342 13.3617 28.6282C16.4281 27.8961 20.0901 27.4783 24 27.4783C27.9099 27.4783 31.5719 27.8961 34.6383 28.6282C35.082 28.7342 35.5339 28.8609 35.9868 29.004Z" fill="currentColor" fill-rule="evenodd"></path>
-</svg>
-</div>
-<h2 class="font-display text-xl font-bold leading-tight tracking-tight">Morya Essentials</h2>
-</div>
-<div class="flex flex-1 justify-end gap-8">
-<nav class="flex items-center gap-9">
-<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Home</a>
-<a class="text-sm font-medium hover:text-primary transition-colors" href="#shop">Shop</a>
-<a class="text-sm font-medium hover:text-primary transition-colors" href="#about">About</a>
-<a class="text-sm font-medium hover:text-primary transition-colors" href="#contact">Contact</a>
-</nav>
-<button class="bg-primary text-white text-sm font-bold h-10 px-6 rounded-lg shadow-lg shadow-primary/20 hover:bg-primary/90 transition-all">
-                    Order Now
-                </button>
-</div>
+
+<body class="bg-background-light text-[#161512]">
+
+<!-- HEADER -->
+<header class="sticky top-0 z-50 bg-background-light/90 backdrop-blur border-b px-4 md:px-10 py-3 md:py-5 flex items-center justify-between">
+  <div class="flex items-center gap-3">
+    <h2 class="font-display text-lg md:text-xl font-bold">Morya Essentials</h2>
+  </div>
+
+  <nav class="hidden md:flex gap-8 text-sm font-medium">
+    <a href="#" class="hover:text-primary">Home</a>
+    <a href="#shop" class="hover:text-primary">Shop</a>
+    <a href="#about" class="hover:text-primary">About</a>
+    <a href="#contact" class="hover:text-primary">Contact</a>
+  </nav>
+
+  <a href="https://wa.me/918767231315"
+     class="bg-primary text-white text-sm font-bold px-5 py-2 rounded-lg">
+    Order Now
+  </a>
 </header>
-<!-- Shop Now / Bulk Section -->
-<section class="marble-bg py-24 px-10" id="shop">
-<div class="max-w-[1200px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
-<div class="relative">
-<div class="organic-blob bg-primary/10 w-full aspect-square absolute -top-10 -left-10 -z-10 animate-pulse"></div>
-<div class="organic-blob overflow-hidden bg-white shadow-2xl transform rotate-3 hover:rotate-0 transition-transform duration-700">
-<img alt="Premium Ayurvedic Kapoor crystals in a traditional bowl" class="w-full h-full object-cover scale-110" data-alt="Premium Ayurvedic Kapoor crystals in a traditional bowl" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCmmhlNVdVLxL3uLvd200TFbDdKbt9l1fwik1Smn_rMzgomLozF2iZC26HEiay_MlGj2yQn5ghpnJsT_YOn8G0xzYk4Yi9vZT6UrhEfm7sCTj-SyQ7zmXdGgWx7YwmS3MRh39YR5lES48uLsVAeZkJrdDoSPzX6kZ9-QGDQYg-IsJsHpOpPOmBxnsWptJxT-tWSxBOULJDr_lqh5WQRjfbO5xIQSx_XAhlbU737oR5BeNx0L8R_IbTwLoI9BjOH5N6pOJ0eIXsI5Fo"/>
-</div>
-<div class="absolute -bottom-6 -right-6 organic-blob w-48 h-48 overflow-hidden border-8 border-background-light shadow-xl hidden lg:block">
-<img alt="Traditional temple prayer ceremony" class="w-full h-full object-cover" data-alt="Traditional temple prayer ceremony" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDitQPtZBjPhL1rb9pBfOs9Cp0RG-vg6kfXYAIaLD8xdymf7vcRktA-UkUCViIK856h2NEybTcYIlcYOg6Vc6BjrPBVmN3pIada2fNQKOgkseXZWE8zItOE9CPrndnGeyjHvlPqIXlRcOI6Uvq-xMhOZQXnMwFs-waqNlY6xXej1D6cnDmwIfNSxApc9C8wix5b8uBGdhx8qMUrNJacJqfQ_6mw3wCbSGX67_Tf6gwbd76l5qf_g3IXpDDe_hN5gePlnUnslEjyMis"/>
-</div>
-</div>
-<div class="space-y-8">
-<div class="inline-flex items-center gap-2 text-primary font-bold uppercase tracking-widest text-xs">
-<span class="w-12 h-px bg-primary"></span>
-                        Premium Collection
-                    </div>
-<h1 class="font-display text-4xl md:text-5xl lg:text-6xl font-black leading-tight tracking-tight">
-                        Experience Purity in Every Spark.
-                    </h1>
-<p class="text-lg text-stone-600 dark:text-stone-400 font-normal leading-relaxed max-w-lg">
-                        Direct from source. No middlemen. Every crystal of our Kapoor is handcrafted to ensure the highest vibrational purity for your rituals.
-                    </p>
-<div class="flex flex-wrap gap-4 pt-4">
-<button class="flex items-center gap-3 bg-[#25D366] text-white px-8 py-4 rounded-xl font-bold shadow-xl hover:shadow-[#25D366]/30 hover:translate-y-[-2px] transition-all">
-<span class="material-symbols-outlined">chat</span>
-                            Order on WhatsApp
-                        </button>
-<div class="flex items-center gap-2 px-4 py-4 text-stone-500 italic text-sm">
-<span class="material-symbols-outlined text-accent-sage">verified</span>
-                            Bulk pricing available
-                        </div>
-</div>
-</div>
-</div>
+
+<!-- HERO / SHOP -->
+<section id="shop" class="marble-bg py-16 md:py-24 px-4 md:px-10">
+  <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+    
+    <div class="relative overflow-hidden">
+      <div class="organic-blob bg-primary/10 w-full aspect-square absolute -top-8 -left-8 -z-10"></div>
+      <div class="organic-blob bg-white shadow-2xl overflow-hidden">
+        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCmmhlNVdVLxL3uLvd200TFbDdKbt9l1fwik1Smn_rMzgomLozF2iZC26HEiay_MlGj2yQn5ghpnJsT_YOn8G0xzYk4Yi9vZT6UrhEfm7sCTj-SyQ7zmXdGgWx7YwmS3MRh39YR5lES48uLsVAeZkJrdDoSPzX6kZ9-QGDQYg-IsJsHpOpPOmBxnsWptJxT-tWSxBOULJDr_lqh5WQRjfbO5xIQSx_XAhlbU737oR5BeNx0L8R_IbTwLoI9BjOH5N6pOJ0eIXsI5Fo"
+             class="w-full h-full object-cover"/>
+      </div>
+    </div>
+
+    <div class="space-y-6">
+      <h1 class="font-display text-3xl md:text-5xl font-bold">
+        Experience Purity in Every Spark.
+      </h1>
+      <p class="text-stone-600 max-w-md">
+        Direct from source. No middlemen. Pure by Faith kapoor for temples & rituals.
+      </p>
+
+      <a href="https://wa.me/918767231315"
+         class="inline-flex items-center gap-3 bg-[#25D366] text-white px-6 py-4 rounded-xl font-bold">
+        <span class="material-symbols-outlined">chat</span>
+        Order on WhatsApp
+      </a>
+    </div>
+  </div>
 </section>
-<!-- About Section -->
-<section class="bg-background-light dark:bg-background-dark py-24 px-10" id="about">
-<div class="max-w-[960px] mx-auto text-center space-y-12">
-<div class="space-y-4">
-<h2 class="font-display text-primary text-xl font-bold italic">Our Essence</h2>
-<h3 class="font-display text-[#161512] dark:text-stone-200 text-4xl md:text-5xl font-bold leading-tight tracking-tight px-4">
-                        Devotion, Purity, and Trust.
-                    </h3>
-</div>
-<div class="relative px-4">
-<span class="material-symbols-outlined text-primary/20 text-9xl absolute -top-12 left-0 -z-0">format_quote</span>
-<p class="text-stone-600 dark:text-stone-400 text-xl font-normal leading-loose relative z-10 max-w-3xl mx-auto italic">
-                        A minimalist journey from traditional Ayurvedic roots to modern spiritual wellness. Our Kapoor is crafted with <span class="text-primary font-bold">'Pure by Faith'</span> principles, ensuring every ritual is elevated by authentic essence. We believe that spiritual tools should be as pure as the intentions behind them.
-                    </p>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-8 pt-10">
-<div class="p-8 rounded-2xl bg-white dark:bg-stone-900 border border-stone-100 dark:border-stone-800 shadow-sm hover:shadow-md transition-shadow">
-<span class="material-symbols-outlined text-primary mb-4 block text-4xl">eco</span>
-<h4 class="font-display font-bold text-lg mb-2">Ayurvedic Roots</h4>
-<p class="text-sm text-stone-500">Hand-selected botanical extractions.</p>
-</div>
-<div class="p-8 rounded-2xl bg-white dark:bg-stone-900 border border-stone-100 dark:border-stone-800 shadow-sm hover:shadow-md transition-shadow">
-<span class="material-symbols-outlined text-primary mb-4 block text-4xl">history_edu</span>
-<h4 class="font-display font-bold text-lg mb-2">Pure by Faith</h4>
-<p class="text-sm text-stone-500">Adhering to ancient sacred protocols.</p>
-</div>
-<div class="p-8 rounded-2xl bg-white dark:bg-stone-900 border border-stone-100 dark:border-stone-800 shadow-sm hover:shadow-md transition-shadow">
-<span class="material-symbols-outlined text-primary mb-4 block text-4xl">workspace_premium</span>
-<h4 class="font-display font-bold text-lg mb-2">Modern Trust</h4>
-<p class="text-sm text-stone-500">Lab-tested for zero synthetic residue.</p>
-</div>
-</div>
-</div>
+
+<!-- ABOUT -->
+<section id="about" class="py-16 md:py-24 px-4 md:px-10">
+  <div class="max-w-4xl mx-auto text-center space-y-8">
+    <h2 class="font-display text-3xl md:text-5xl font-bold">Devotion, Purity & Trust</h2>
+    <p class="text-stone-600 italic">
+      Crafted with “Pure by Faith” principles. No chemicals. Only sacred purity.
+    </p>
+  </div>
 </section>
-<!-- Help / Contact Section -->
-<section class="py-24 px-10 relative overflow-hidden" id="contact">
-<div class="absolute top-0 right-0 w-1/3 h-full bg-primary/5 -skew-x-12 translate-x-1/2"></div>
-<div class="max-w-[1200px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-20 relative z-10">
-<div class="space-y-10">
-<div>
-<h2 class="font-display text-4xl font-bold mb-6">Need Assistance?</h2>
-<p class="text-stone-600 dark:text-stone-400 text-lg leading-relaxed">
-                            We specialize in supplying large-scale temple needs and bulk retail orders across the nation. Reach out to our dedicated spiritual wellness team.
-                        </p>
-</div>
-<div class="space-y-6">
-<div class="flex items-start gap-5 p-6 rounded-2xl bg-white dark:bg-stone-900 shadow-lg shadow-stone-200/50 dark:shadow-none border border-stone-100 dark:border-stone-800 group hover:border-primary transition-colors">
-<div class="bg-primary/10 p-3 rounded-lg text-primary group-hover:bg-primary group-hover:text-white transition-all">
-<span class="material-symbols-outlined">mail</span>
-</div>
-<div>
-<p class="text-xs uppercase font-bold tracking-widest text-stone-400 mb-1">Email Us</p>
-<a class="text-xl font-medium hover:text-primary transition-colors" href="mailto:help.moryatraders@gmail.com">help.moryatraders@gmail.com</a>
-</div>
-</div>
-<div class="flex items-start gap-5 p-6 rounded-2xl bg-white dark:bg-stone-900 shadow-lg shadow-stone-200/50 dark:shadow-none border border-stone-100 dark:border-stone-800 group hover:border-primary transition-colors">
-<div class="bg-primary/10 p-3 rounded-lg text-primary group-hover:bg-primary group-hover:text-white transition-all">
-<span class="material-symbols-outlined">phone_iphone</span>
-</div>
-<div>
-<p class="text-xs uppercase font-bold tracking-widest text-stone-400 mb-1">Call / WhatsApp</p>
-<a class="text-xl font-medium hover:text-primary transition-colors" href="tel:8767231315">+91 8767231315</a>
-</div>
-</div>
-</div>
-<div class="flex items-center gap-4 text-sm text-stone-500">
-<span class="material-symbols-outlined text-accent-sage">temple_hindu</span>
-<span>Official Partner for 200+ Temples Nationwide</span>
-</div>
-</div>
-<div class="bg-stone-900 rounded-3xl p-10 text-white relative overflow-hidden shadow-2xl">
-<div class="absolute top-0 left-0 w-full h-full opacity-10" data-location="India" style="https://lh3.googleusercontent.com/aida-public/AB6AXuCd6IcWAHg1ekt2xNfItvaCdAmjdhXQjbbIVQIYJi7XUc6l7WXv00TGKcM9fIt_SqNLBgx7Aw8qMU9NRBqDDr5QvsveBZTo_y49hBBCmPIQe3dWVaB21_FNuicDrkUd1XKVSj6Q2TSVu3OgLtxRkYAAdf2ucEZDm6B7GnrKusHFxjdr1T0eEdZjOtLNPEnoeYRX_0gsj5zyb9-Jv91CLDLTFdpk7ytJ5X0daLipim59UznqM4yXpnGDbjDKvTRhu2c5BKLS9s9cEVU">
-<!-- Abstract location pattern -->
-<svg class="w-full h-full" preserveaspectratio="none" viewbox="0 0 100 100">
-<path d="M0 0 L100 0 L100 100 L0 100 Z" fill="url(#grid)"></path>
-<defs>
-<pattern height="10" id="grid" patternunits="userSpaceOnUse" width="10">
-<path d="M 10 0 L 0 0 0 10" fill="none" stroke="currentColor" stroke-width="0.5"></path>
-</pattern>
-</defs>
-</svg>
-</div>
-<div class="relative z-10 h-full flex flex-col justify-between">
-<h3 class="font-display text-2xl font-bold mb-8 italic">Bulk Order Inquiry</h3>
-<form class="space-y-4">
-<input class="w-full bg-stone-800 border-stone-700 rounded-xl px-5 py-4 focus:ring-primary focus:border-primary" placeholder="Your Name" type="text"/>
-<input class="w-full bg-stone-800 border-stone-700 rounded-xl px-5 py-4 focus:ring-primary focus:border-primary" placeholder="Contact Email" type="email"/>
-<textarea class="w-full bg-stone-800 border-stone-700 rounded-xl px-5 py-4 focus:ring-primary focus:border-primary" placeholder="Tell us about your temple or store needs..." rows="4"></textarea>
-<button class="w-full bg-primary py-4 rounded-xl font-bold text-white shadow-xl shadow-primary/20 hover:scale-[1.02] transition-transform" type="submit">
-                                Send Inquiry
-                            </button>
-</form>
-</div>
-</div>
-</div>
+
+<!-- CONTACT -->
+<section id="contact" class="py-16 md:py-24 px-4 md:px-10">
+  <div class="max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10">
+    
+    <div class="space-y-6">
+      <h3 class="font-display text-3xl font-bold">Need Assistance?</h3>
+
+      <p class="text-stone-600">
+        Temple supply, bulk retail & puja requirements.
+      </p>
+
+      <div>
+        <p class="text-sm font-bold">Email</p>
+        <a href="mailto:help.moryatraders@gmail.com"
+           class="break-all text-primary font-medium">
+          help.moryatraders@gmail.com
+        </a>
+      </div>
+
+      <div>
+        <p class="text-sm font-bold">Call / WhatsApp</p>
+        <a href="tel:8767231315" class="text-primary font-medium">
+          +91 8767231315
+        </a>
+      </div>
+    </div>
+
+    <div class="bg-stone-900 text-white p-8 rounded-3xl">
+      <h4 class="font-display text-xl mb-4">Bulk Order Inquiry</h4>
+      <form class="space-y-4">
+        <input class="w-full rounded-lg px-4 py-3 text-black" placeholder="Your Name"/>
+        <input class="w-full rounded-lg px-4 py-3 text-black" placeholder="Email"/>
+        <textarea class="w-full rounded-lg px-4 py-3 text-black" rows="4" placeholder="Your requirement"></textarea>
+        <button class="w-full bg-primary py-3 rounded-lg font-bold">
+          Send Inquiry
+        </button>
+      </form>
+    </div>
+
+  </div>
 </section>
-<!-- Footer -->
-<footer class="bg-white dark:bg-stone-950 border-t border-stone-100 dark:border-stone-900 pt-20 pb-10 px-10">
-<div class="max-w-[1200px] mx-auto grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
-<div class="col-span-1 md:col-span-2 space-y-6">
-<div class="flex items-center gap-3">
-<div class="size-6 text-primary">
-<svg fill="currentColor" viewbox="0 0 48 48">
-<path d="M13.8261 30.5736C16.7203 29.8826 20.2244 29.4783 24 29.4783C27.7756 29.4783 31.2797 29.8826 34.1739 30.5736L24.8486 7.36089L6.64374 33.8352C8.00331 32.7669 11.0856 31.2278 13.8261 30.5736Z"></path>
-</svg>
-</div>
-<h2 class="font-display text-2xl font-bold">Morya Essentials</h2>
-</div>
-<p class="text-stone-500 max-w-sm italic">
-                        Bringing the ancient sanctity of pure Kapoor to your modern spiritual sanctuary. Handcrafted for devotion, verified by faith.
-                    </p>
-<div class="flex gap-4">
-<a class="w-10 h-10 rounded-full bg-stone-100 dark:bg-stone-800 flex items-center justify-center text-stone-600 dark:text-stone-400 hover:bg-primary hover:text-white transition-all" href="#">
-<span class="material-symbols-outlined text-xl">social_leaderboard</span>
+
+<!-- WHATSAPP FLOAT -->
+<a href="https://wa.me/918767231315"
+   class="fixed bottom-6 right-6 bg-[#25D366] text-white p-4 rounded-full shadow-xl">
+  <span class="material-symbols-outlined text-3xl">chat</span>
 </a>
-<a class="w-10 h-10 rounded-full bg-stone-100 dark:bg-stone-800 flex items-center justify-center text-stone-600 dark:text-stone-400 hover:bg-primary hover:text-white transition-all" href="#">
-<span class="material-symbols-outlined text-xl">share</span>
-</a>
-</div>
-</div>
-<div>
-<h4 class="font-bold mb-6 text-stone-900 dark:text-stone-100 uppercase text-xs tracking-[0.2em]">Quick Links</h4>
-<ul class="space-y-4 text-stone-500 text-sm">
-<li><a class="hover:text-primary transition-colors" href="#">Return to Top</a></li>
-<li><a class="hover:text-primary transition-colors" href="#shop">Our Collection</a></li>
-<li><a class="hover:text-primary transition-colors" href="#about">Our Story</a></li>
-<li><a class="hover:text-primary transition-colors" href="#contact">Support Center</a></li>
-</ul>
-</div>
-<div>
-<h4 class="font-bold mb-6 text-stone-900 dark:text-stone-100 uppercase text-xs tracking-[0.2em]">Our Reach</h4>
-<ul class="space-y-4 text-stone-500 text-sm">
-<li>Temple Supplies</li>
-<li>Bulk Retail Orders</li>
-<li>Export Inquiries</li>
-<li>Corporate Gifting</li>
-</ul>
-</div>
-</div>
-<div class="max-w-[1200px] mx-auto pt-10 border-t border-stone-100 dark:border-stone-900 flex flex-col md:flex-row justify-between items-center gap-6">
-<p class="text-stone-400 text-xs">
-                    © 2024 Morya Essentials. Pure by Faith. All rights reserved.
-                </p>
-<div class="flex gap-8 text-stone-400 text-xs font-medium">
-<a class="hover:text-primary transition-colors" href="#">Privacy Policy</a>
-<a class="hover:text-primary transition-colors" href="#">Terms of Service</a>
-</div>
-</div>
-</footer>
-<!-- Fixed WhatsApp Floating Button -->
-<a class="fixed bottom-8 right-8 z-[100] bg-[#25D366] text-white p-4 rounded-full shadow-2xl hover:scale-110 transition-transform flex items-center justify-center group" href="https://wa.me/918767231315">
-<span class="material-symbols-outlined text-3xl">chat</span>
-<span class="absolute right-full mr-4 bg-white text-stone-900 px-4 py-2 rounded-lg text-sm font-bold shadow-xl opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">
-                WhatsApp Us
-            </span>
-</a>
-</div>
-</body></html>
+
+</body>
+</html>
